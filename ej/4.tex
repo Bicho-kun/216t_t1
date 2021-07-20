@@ -1,0 +1,235 @@
+\section{Productos $\bar vv$, $v\bar v$ y $\bar vu$}
+\begingroup\color{blue}
+Muestre que
+\begin{equation}
+\begin{split}
+\text{a)}\quad&\bar v^r(k)v^s(k)=-2m\delta^{rs}\\
+\text{b)}\quad&\sum_{s=1}^2v(p,s)\bar v(p,s)=\cp-m\\
+\text{c)}\quad&\bar v(p,r)u(p,s)=0
+\end{split}
+\end{equation}
+\endgroup
+\subsection{}
+De la ecuación (\ref{pera}) tenemos:
+\begin{equation*}\begin{split}
+\bar v^r(k)v^s(k)&=v^{r\dagger}(k)\gamma^0v^s(k)\\
+&=
+\left(
+-\frac{v^{r\dagger}(k_R)(m-\ck^\dagger)}{\sqrt{2m(k_0+m)}}
+\right)\gamma^0
+\left(
+-\frac{(m-\ck)v^s(k_R)}{\sqrt{2m(k_0+m)}}
+\right)\\
+&=\frac1{2(k_0+m)}(\eta^{r\dagger}\quad-\eta^{r\dagger})
+(m-\ck^\dagger)\gamma^0(m-\ck)
+\left(\begin{array}r
+\eta^s\\-\eta^s
+\end{array}\right)\\
+&=\frac1{2(k_0+m)}(\eta^{r\dagger}\quad-\eta^{r\dagger})\gamma^0
+(m-\ck)(m-\ck)
+\left(\begin{array}r
+\eta^s\\-\eta^s
+\end{array}\right)\\
+&=\frac1{2(k_0+m)}(-\eta^{r\dagger}\quad\eta^{r\dagger})
+(m^2-2m\ck+k_\mu k^\mu)
+\left(\begin{array}r
+\eta^s\\-\eta^s
+\end{array}\right)
+\end{split}\end{equation*}
+\begin{equation}\begin{split}
+&=\frac{2m}{2(k_0+m)}(-\eta^{r\dagger}\quad\eta^{r\dagger})
+(m-\ck)
+\left(\begin{array}r
+\eta^s\\-\eta^s
+\end{array}\right)\\
+&=\frac{2m}{2(k_0+m)}(-\eta^{r\dagger}\quad\eta^{r\dagger})
+(m-\ck)
+\left(\begin{array}r
+\eta^s\\-\eta^s
+\end{array}\right)\\
+&=\frac{2m}{2(k_0+m)}(\quad
+-2m\eta^{r\dagger}\eta^s
+-\eta^{r\dagger}k_\mu\sigma_+^\mu\eta^s
+-\eta^{r\dagger}k_\mu\sigma_-^\mu\eta^s\quad)\\
+&=\frac{-2m}{2(k_0+m)}(2m+2k_0)\eta^{r\dagger}\eta^s\\
+&=-2m\delta^{rs}
+\end{split}\end{equation}
+\subsection{}
+Usaremos la convención de Einstein para el ínidce del espín.
+\begin{equation}
+\begin{split}
+&v^s(k)\bar v_s(k)\\
+&\quad=v^s(k)v_s^\dagger(k)\gamma^0\\
+&\quad=
+\left(
+-\frac{(m-\ck)v^s(k_R)}{\sqrt{2m(k_0+m)}}
+\right)
+\left(
+-\frac{v_s^\dagger(k_R)(m-\ck^\dagger)}{\sqrt{2m(k_0+m)}}
+\right)\gamma^0\\
+&\quad=
+\frac1{2(k_0+m)}
+(m-\ck)
+\left(
+\begin{array}r
+\eta^s\!\!\\
+\!\!-\eta^s\!\!
+\end{array}
+\right)
+(\eta_s^\dagger\quad-\!\eta_s^\dagger)
+(m-\ck^\dagger)\gamma^0\\
+&\quad=
+\frac1{2(k_0+m)}
+(m-\ck)
+\left(\begin{array}{rr}
+\eta^s\eta_s^\dagger&-\eta^s\eta_s^\dagger\!\!\\
+\!\!-\eta^s\eta_s^\dagger&\eta^s\eta_s^\dagger\!\!
+\end{array}\right)\gamma^0
+(m-\ck)\gamma^0\gamma^0\\
+&\quad=
+\frac1{2(k_0+m)}
+(m-\ck)
+\left(\begin{array}{rr}
+\id&-\id\!\\
+\!\!\!-\id&\id\!
+\end{array}\right)
+\gamma^0
+(m-\ck)\\
+&\quad=
+\frac1{2(k_0+m)}
+(m-\ck)
+(\id-\gamma^0)
+\gamma^0(m-\ck)\\
+&\quad=
+\frac1{2(k_0+m)}
+(m-\ck)
+(\gamma^0-\id)
+(m-\ck)
+\end{split}
+\label{ragatoba}
+\end{equation}
+Desarrollaremos dos expresiones de manera independiente.
+\begin{equation}
+(m-\ck)(-\id)(m-\ck)
+=-(m^2-2m\ck+k_\mu k^\mu)
+=2m(\ck-m)
+\label{garabato}
+\end{equation}
+Por otro lado,
+\begin{equation}\begin{split}
+&(m-\ck)\gamma^0(m-\ck)\\
+&\quad=
+\begin{pmatrix}
+m&-k_\mu\sigma_-^\mu\\
+-k_\mu\sigma_+^\mu&m
+\end{pmatrix}
+\begin{pmatrix}0&\id\\\id&0\end{pmatrix}
+\begin{pmatrix}
+m&-k_\mu\sigma_-^\mu\\
+-k_\mu\sigma_+^\mu&m
+\end{pmatrix}\\
+&\quad=
+\begin{pmatrix}
+m&-k_\mu\sigma_-^\mu\\
+-k_\mu\sigma_+^\mu&m
+\end{pmatrix}
+\begin{pmatrix}
+-k_\mu\sigma_+^\mu&m\\
+m&-k_\mu\sigma_-^\mu
+\end{pmatrix}\\
+&\quad=
+\begin{pmatrix}
+-mk_\mu\sigma_+^\mu -mk_\mu\sigma_-^\mu &
+m^2+k_\mu k_\nu\sigma_-^\mu\sigma_-^\nu \\
+m^2+k_\mu k_\nu\sigma_+^\mu\sigma_+^\nu &
+-mk_\mu\sigma_+^\mu -mk_\mu\sigma_-^\mu
+\end{pmatrix}
+\end{split}\label{public}\end{equation}
+Una vez más, dividiremos el trabajo en dos casos.
+\begin{equation}
+-mk_\mu\sigma_+^\mu -mk_\mu\sigma_-^\mu
+=-mk_\mu(\sigma_+^\mu+\sigma_-^\mu)
+=-2mk_0
+\end{equation}
+Por otro lado tenemos:
+\begin{equation}\begin{split}
+m^2+k_\mu k_\nu\sigma_\pm^\mu\sigma_\pm^\nu
+&=m^2+\frac12k_\mu k_\nu\{\sigma_\pm^\mu,\sigma_\pm^\nu\}\\
+&=m^2+2k_0k_\mu\sigma_\pm^\mu-k_\mu k^\mu\\
+&=2k_0k_\mu\sigma_\pm^\mu,
+\end{split}\end{equation}
+donde hemos usado:
+\begin{equation}\begin{split}
+\frac12\{\sigma_\pm^\mu,\sigma_\pm^\nu\}
+&=\begin{pmatrix}
+\id&\sigma_\pm^x&\sigma_\pm^y&\sigma_\pm^z\\
+\sigma_\pm^x&\id&0&0\\
+\sigma_\pm^y&0&\id&0\\
+\sigma_\pm^z&0&0&\id
+\end{pmatrix}\\
+&=\delta_0^\nu\sigma_\pm^\mu+\delta_0^\mu\sigma_\pm^\nu-\eta^{\mu\nu}\id.
+\end{split}\label{gordo}\end{equation}
+Incorporando estos resultados a la matriz de (\ref{public}) obtenemos:
+\begin{equation}\begin{split}
+(m-\ck)\gamma^0(m-\ck)
+&=
+\begin{pmatrix}
+-2mk_0&2k_0k_\mu\sigma_-^\mu\\
+2k_0k_\mu\sigma_+^\mu&-2mk_0
+\end{pmatrix}=2k_0(\ck-m)
+\end{split}\end{equation}
+Este resultado y el (\ref{garabato}) los incorporamos a (\ref{ragatoba}) y obtenemos:
+\begin{equation}\begin{split}
+v^s(k)\bar v_s(k)
+&=\frac1{2(k_0+m)}(m-\ck)(\gamma^0-\id)(m-\ck)\\
+&=\frac1{2(k_0+m)}(2m (\ck-m) + 2k_0(\ck-m))\\
+&=\ck-m,
+\end{split}\end{equation}
+que es lo que queríamos demostrar.
+\subsection{}
+Expresando la $\bar v$ y la $u$ en términos de los espinores en reposo:
+\begin{equation}\begin{split}
+\bar v^r(k)u^s(k)
+&=v^{r\dagger}(k)\gamma^0u^s(k)\\
+&=\left(
+\frac{
+v^{r\dagger}(k_R)(\ck^\dagger-m)
+}{
+\sqrt{2m(k_0+m)}
+}
+\right)
+\gamma^0
+\left(
+\frac{
+(\ck+m)u^s(k_R)
+}{
+\sqrt{2m(k_0+m)}
+}
+\right)\\
+&=\frac{v^{r\dagger}(k_R)\gamma^0(\ck-m)(\ck+m)u^s(k_R)}{2m(k_0+m)}\\
+&=\frac{v^{r\dagger}(k_R)\gamma^0(k_\mu k^\mu -m^2)u^s(k_R)}{2m(k_0+m)}\\
+&=0,\quad\text{porque $m^2=k_\mu k^\mu$.}
+\end{split}\end{equation}
+Un resultado que utilizaremos en el problema 5 tiene un desarrollo similar:
+\begin{equation}\begin{split}
+\bar u^r(k)v^s(k)
+&=u^{r\dagger}(k)\gamma^0v^s(k)\\
+&=\left(
+\frac{
+u^{r\dagger}(k_R)(\ck^\dagger+m)
+}{
+\sqrt{2m(k_0+m)}
+}
+\right)
+\gamma^0
+\left(
+\frac{
+(\ck+m)v^s(k_R)
+}{
+\sqrt{2m(k_0-m)}
+}
+\right)\\
+&=\frac{u^{r\dagger}(k_R)\gamma^0(\ck+m)(\ck-m)v^s(k_R)}{2m(k_0+m)}\\
+&=\frac{u^{r\dagger}(k_R)\gamma^0(k_\mu k^\mu -m^2)v^s(k_R)}{2m(k_0+m)}\\
+&=0,\quad\text{por la misma razón.}
+\end{split}\end{equation}

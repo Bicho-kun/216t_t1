@@ -1,0 +1,169 @@
+\section{Transformación de $u_\pm^\dagger\sigma_\pm^\mu u_\pm$}
+\begingroup\color{blue}
+Muestre que las combinaciones $u_+^\dagger\sigma_+^\mu u_+$ y $u_-^\dagger\sigma_-^\mu u_-$ transforman como cuadrivectores, es decir, se satisface la transformación:
+\begin{equation}
+\exp(\tfrac i2(\theta \vec n\pm i\vec\beta)\jdot\sigma)
+\sigma_\pm^\mu
+\exp(-\tfrac i2(\theta \vec n\mp i\vec\beta)\jdot\sigma)
+=\Lambda^\mu{_\nu}(\theta \vec n,\vec \beta)\sigma_\pm^\nu
+\end{equation}
+la prueba la puede hacer a orden infinitesimal, es decir, recordando que $\Lambda^\mu{}_\nu=\delta_\nu^\mu+\omega^\mu{}_\nu$ y hay que escribir $\omega^\mu{}_\nu$ en términos de $(\theta\vec n,\vec \beta)$.
+\endgroup
+\par Para comparar los grupos de transformación debemos primero generar una transformación lineal de los generadores de cada grupo que preserve el corchete de Lie. El álgebra del grupo \gldc es:
+\begin{equation}
+[\sigma_i,\sigma_j]=2i\epsilon_{ij}{}^k\sigma_k,
+\quad
+[\sigma_i,\tau_j]=2i\epsilon_{ij}{}^k\tau_k,
+\quad
+[\tau_i,\tau_j]=-2i\epsilon_{ij}{}^k\sigma_k,
+\end{equation}
+donde $\sigma_i$ son las matrices de Pauli y $\tau_i=i\sigma_i$.
+Por lo tanto, definiremos matrices $R_i$ y $B_i$ del álgebra de O(1,3) que tengan la misma álgebra:
+\begin{equation*}
+R_x=2i\begin{pmatrix}
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&-1\\
+0&0&1&0
+\end{pmatrix},\quad
+R_y=2i\begin{pmatrix}
+0&0&0&0\\
+0&0&0&1\\
+0&0&0&0\\
+0&-1&0&0
+\end{pmatrix},
+\end{equation*}
+\begin{equation}
+R_z=2i\begin{pmatrix}
+0&0&0&0\\
+0&0&0&0\\
+0&0&0&-1\\
+0&0&1&0
+\end{pmatrix},\quad
+B_x=2i\begin{pmatrix}
+0&1&0&0\\
+1&0&0&0\\
+0&0&0&0\\
+0&0&0&0
+\end{pmatrix},
+\end{equation}
+\begin{equation*}
+B_y=2i\begin{pmatrix}
+0&0&1&0\\
+0&0&0&0\\
+1&0&0&0\\
+0&0&0&0
+\end{pmatrix},\quad
+B_z=2i\begin{pmatrix}
+0&0&0&1\\
+0&0&0&0\\
+0&0&0&0\\
+1&0&0&0
+\end{pmatrix}.
+\end{equation*}
+Para facilitar el álgebra, podemos reescribir las componentes de estas matrices como:
+\begin{equation}
+R^{i\mu}{}_\nu=2i\delta^\mu_j\delta^k_\nu\epsilon^{ij}{}_k,
+\quad
+B^{i\mu}{}_\nu=2i(\delta^\mu_j\delta^{ij}\sigma_\pm^0+\delta^\mu_0\sigma_\pm^i)
+\label{erre}
+\end{equation}
+Cumpliéndose:
+\begin{equation}
+[R_i,R_j]=2i\epsilon_{ij}{}^kR_k,
+\quad
+[R_i,B_j]=2i\epsilon_{ij}{}^kB_k,
+\quad
+[B_i,B_j]=-2i\epsilon_{ij}{}^kR_k,
+\end{equation}
+Así que tenemos un homomorfismo de álgebras de Lie:
+\begin{equation}
+\phi(\sigma_i)=R_i,\quad\phi(\tau_i)=B_i,
+\end{equation}
+y si $\pi$ y $\rho$ son vectores del álgebra de Lie de \gldc, entonces,
+\begin{equation}
+\phi^{-1}([\phi(\pi),\phi(\rho)])=[\pi,\rho].
+\end{equation}
+\par Con esta notación, quizás un poco pesada, podemos reescribir la transformación de \gldc de la siguiente manera:
+\begin{equation}
+\exp(\tfrac i2(\theta \vec n+ i\vec\beta)\jdot\sigma)
+=\exp(\tfrac i2(\vec\theta\jdot\sigma+\vec\beta\jdot\tau))
+\approx\id+\frac i2(\vec\theta\jdot\sigma+\vec\beta\jdot\tau),
+\end{equation}
+donde hemos tomado la aproximación a primer orden en el desarrollo de la exponencial y hemos simplificado el álgebra con $\vec\theta=\theta\vec n$.
+\par Usando nuestro homomorfismo de álgebras de Lie, y del hecho de que grupos de Lie con el mismo álgebra son localmente isomorfos\footnote{Esta propiedad se denomina {\bf segundo teorema fundamental de Lie.}}, la transformación de Lorentz correspondiente será:
+\begin{equation}
+\exp(\frac i2(\vec\theta\jdot R\pm\vec\beta\jdot B))^\mu{}_\nu
+=\Lambda^\mu{}_\nu(\vec\theta,\vec\beta)
+\approx \delta^\mu_\nu + \frac i2(\theta^iR_i{}^\mu{}_\nu+\beta^iB_i{}^\mu{}_\nu)
+\end{equation}
+\par Ahora, expresaremos la transformación usando la representación de \gldc mediante conjugación\footnote{De hecho, no es exactamente una conjugación, sino más bien una especie de conjugación compleja: $\sigma_\pm^\mu\mapsto S_\pm(\Lambda)\sigma_\pm^\mu S_\pm(\Lambda)^*$}.
+\begin{equation}\begin{split}
+&\exp(\tfrac i2(\theta \vec n\pm i\vec\beta)\jdot\sigma)
+\sigma_\pm^\mu
+\exp(-\tfrac i2(\theta \vec n\mp i\vec\beta)\jdot\sigma)\\
+&\quad\approx
+[\id+\tfrac i2(\vec \theta\pm i\vec\beta)\jdot\sigma]
+\sigma_\pm^\mu
+[\id-\tfrac i2(\vec \theta\mp i\vec\beta)\jdot\sigma]\\
+&\quad\approx
+\sigma_\pm^\mu
++\frac i2\theta_i\sigma^i\sigma_\pm^\mu
+\mp\frac12\beta_i\sigma^i\sigma_\pm^\mu
+-\frac i2\theta_i\sigma_\pm^\mu\sigma^i
+\mp\frac12\beta_i\sigma_\pm^\mu\sigma^i\\
+&\quad=
+\sigma_\pm^\mu
++\frac i2\theta_i[\sigma^i,\sigma_\pm^\mu]
+\mp\frac12\beta_i\{\sigma^i,\sigma_\pm^\mu\}
+\end{split}\label{tren}\end{equation}
+Ahora, utilizando la expresión (\ref{gordo}), podemos deducir:
+\begin{equation}\begin{split}
+\mp\frac12\beta_i\{\sigma^i,\sigma_\pm^\mu\}
+&=-\frac12\beta_i\{\sigma_\pm^i,\sigma_\pm^\mu\}\\
+&=\beta_i(-\delta_0^\mu\sigma_\pm^i-\cancel{\delta_0^i\sigma_\pm^\nu}+\eta^{i\mu}\id)\\
+&=-\beta_i(\delta^\mu_j\delta^{ij}\sigma_\pm^0+\delta^\mu_0\sigma_\pm^i)\\
+&=\frac i2\beta_iR^{i\mu}{}_\nu\sigma_\pm^\nu,
+\quad\text{por la definición en (\ref{erre}).}
+\end{split}\end{equation}
+\par Debido a que
+\begin{equation}
+[\sigma^i,\sigma_\pm^0]
+=[\sigma^i,\id]=0,
+\end{equation}
+entonces
+\begin{equation}\begin{split}
+ \frac i2\theta_i[\sigma^i,\sigma_\pm^\mu]
+&=\pm\frac i2\delta_j^\mu\theta_i[\sigma^i,\sigma^j]\\
+&=\pm\frac i2\delta_j^\mu\theta_i(2i\epsilon^{ij}{}_k\sigma^k)\\
+&=\frac i2\theta_i(2i\delta^\mu_j\delta^k_\nu\epsilon^{ij}{}_k)\sigma_\pm^\nu\\
+&=\frac i2\theta_iR^{i\mu}{}_\nu\sigma_\pm^\nu,
+\quad\text{por la definición en (\ref{erre}).}
+\end{split}\end{equation}
+\par Sustituimos estos resultados en (\ref{tren}) y obtenemos:
+\begin{equation}\begin{split}
+&\exp(\tfrac i2(\theta \vec n\pm i\vec\beta)\jdot\sigma)
+\sigma_\pm^\mu
+\exp(-\tfrac i2(\theta \vec n\mp i\vec\beta)\jdot\sigma)\\
+&\quad\approx
+\sigma_\pm^\mu
++\frac i2\theta_i[\sigma^i,\sigma_\pm^\mu]
+\mp\frac12\beta_i\{\sigma^i,\sigma_\pm^\mu\}\\
+&\quad=
+\delta^\mu_\nu\sigma_\pm^\nu
++\frac i2\theta_iR^{i\mu}{}_\nu\sigma_\pm^\nu
++\frac i2\beta_iB^{i\mu}{}_\nu\sigma_\pm^\nu\\
+&\quad\approx \exp(\frac i2(\theta_iR^i+\beta_iB^i))^\mu{}_\nu\sigma_\pm^\nu\\
+&\quad=\Lambda(\vec\theta,\vec\beta)^\mu{}_\nu\sigma_\pm^\nu.
+\end{split}\end{equation}
+Que es lo que queríamos demostrar aunque a primer orden. \par Recordemos que en la transformación $u_\pm\mapsto S_\pm(\Lambda)u_\pm$ no cambia las $\sigma_\pm^\mu$, sino que cambia toda la expresión $u_\pm^\dagger\sigma_\pm^\mu u_\pm$. Por lo tanto, se requiere de un paso extra:
+\begin{equation}
+u_\pm^{\dagger\prime}\sigma_\pm^\mu u_\pm'
+=
+u_\pm^\dagger S_\pm(\Lambda)\sigma_\pm^\mu  S_\pm(\Lambda)^*u_\pm
+=
+u_\pm^\dagger\Lambda^\mu{}_\nu\sigma_\pm^\nu u_\pm
+=
+\Lambda^\mu{}_\nu\;u_\pm^\dagger\sigma_\pm^\nu u_\pm.
+\end{equation}
+

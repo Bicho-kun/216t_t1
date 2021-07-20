@@ -1,0 +1,127 @@
+\section{Normalización de $v(k,s)$}
+\begingroup\color{blue}
+Muestre que las soluciones de energía negativa de la ecuación de Dirac están normalizadas como
+\begin{equation}
+v(k,s)=\frac{m-\ck}{m\sqrt{2(k_0+m)}}v^s(k_R)
+\end{equation}
+\endgroup
+Comenzaremos por escribir la solución libre del espinor de energía negativa.
+\begin{equation*}
+v(x,s)=v(k,s)\exp(ik\cdot x)
+\end{equation*}
+Sabemos que cumple la ecuación libre de Dirac:
+\begin{equation}
+0=(i\gamma^\mu\partial_\mu-m)v
+=-(\gamma^\mu k_\mu + m)v
+\end{equation}
+Es como si $\psi$ fuera ``eigenvector'' del operador diferencial con ``eigenvalor'' $(i\gamma^\mu k_\mu-m)$.
+\par Recordemos que esto implica que el espinor debe ser necesariamente de la forma:
+\begin{equation}
+v(k_R)=\sqrt m\left(\begin{array}r
+\eta\\-\eta
+\end{array}\right),
+\quad\text{siendo $\eta$ un espinor de Weil normalizado}
+\end{equation}
+Tomemos ahora un marco de referencia en reposo ($\ck_R = m\gamma^0$).
+\begin{equation}
+(\ck_R-m)v(k_R)=
+m\left(\begin{array}{rr}
+-\id&\id\\
+\id&-\id
+\end{array}\right)
+\sqrt m\left(\begin{array}{r}
+\eta\\
+-\eta
+\end{array}\right)
+=-2mv(k_R)
+\end{equation}
+quedando finalmente como
+\begin{equation}
+v(k_R)=-\frac1{2m}(\ck_R-m)v(k_R)
+\end{equation}
+Igual que en las notas, ahora hay que generalizar a un marco en movimiento.
+\begin{equation}
+v(k)=N_p(\ck-m)v(k_R)
+\end{equation}
+Esto se justifica porque si multiplicamos por la izquierda por $(\ck+m)$ obtenemos $(k_\mu k^\mu-m^2)$, que es cero.
+\par Deseamos que en el marco en reposo $N_p=-\frac1{2m}$. 
+% También deseamos que:
+% \begin{equation}
+% \bar v(k_R)v(k_R)=2m.
+% \end{equation}
+De manera que
+\begin{equation}\begin{split}
+v^\dagger(k)&=N_p^*v^\dagger(k_R)(\gamma^{\mu\dagger}k_\mu-m)\\
+\bar v(k)&=N_p^*v^\dagger(k_R)(\ck^\dagger-m)\gamma^0\\
+&=N_p^*v^\dagger(k_R)\gamma^0(\ck-m)\\
+\bar v(k)v(k)&=|N_p|^2v^\dagger(k_R)\gamma^0(\ck-m)(\ck-m)v(k_R)\\
+&=|N_p|^2v^\dagger(k_R)\gamma^0(k_\mu k^\mu-2m\ck+m^2)v(k_R)\\
+&=2m|N_p|^2v^\dagger(k_R)\gamma^0(m-\ck)v(k_R)\\
+\end{split}\end{equation}
+Donde hemos usado la simetría de $k_\mu k_\nu$ para comprobar que
+\begin{equation}
+\ck\ck
+=k_\mu k_\nu\gamma^\mu\gamma^\nu
+=\frac12k_\mu k_\nu\{\gamma^\mu,\gamma^\nu\}
+=k_\mu k_\nu \eta^{\mu\nu}
+=k_\mu k^\mu
+\end{equation}
+Escribiremos esto en forma matricial con la representación que estamos manejando:
+\begin{equation}\begin{split}
+\bar v(k)v(k)&=
+2m|N_p|^2v^\dagger(k_R)
+\begin{pmatrix}0&\id\\\id&0\end{pmatrix}
+\begin{pmatrix}
+m&-k_\mu\sigma_-^\mu\\
+-k_\mu\sigma_+^\mu&m
+\end{pmatrix}
+v(k_R)\\
+&=
+2m^2|N_p|^2
+(\eta^\dagger\quad-\eta^\dagger)
+\begin{pmatrix}
+-k_\mu\sigma_+^\mu&m\\
+m&-k_\mu\sigma_-^\mu
+\end{pmatrix}
+\left(\begin{array}r\eta\\-\eta\end{array}\right)\\
+&=
+2m^2|N_p|^2
+(\eta^\dagger\quad-\eta^\dagger)
+\left(\begin{array}r
+-(k_\mu\sigma_+^\mu+m)\eta\\
+ (k_\mu\sigma_-^\mu+m)\eta
+\end{array}\right)\\
+&=
+-2m^2|N_p|^2
+(\quad
+\eta^\dagger(k_\mu\sigma_+^\mu+m)\eta
+\;+\;
+\eta^\dagger(k_\mu\sigma_-^\mu+m)\eta
+\quad)
+\end{split}\end{equation}
+\par Recordando que $\sigma_\pm^\mu=(\id,\pm\sigma_i)$, sólo sobreviven las $\sigma_\pm^0=\id$.
+\begin{equation}\begin{split}
+\bar v(k)v(k)&=
+-2m^2|N_p|^2
+(\quad
+2(k_0+m)\eta^\dagger\eta
+\quad)\\
+&=-4m^2(k_0+m)|N_p|^2\\
+&=-2m,\quad\text{porque es lo que esperamos.}
+\end{split}\end{equation}
+\begin{equation}\begin{split}
+\Rightarrow\quad2m(k_0+m)|N_p|^2&=1\\
+\Rightarrow\quad|N_p|&=\frac1{\sqrt{2m(k_0+m)}}\\
+\Rightarrow\quad v(k)&=\frac{(\ck-m)}{\sqrt{2m(k_0+m)}}v(k_R)\\
+&=\frac{(\ck-m)\sqrt m}{\sqrt{2m(k_0+m)}}
+\left(\begin{array}r\eta\\-\eta\end{array}\right)\\
+&=\frac{\ck-m}{\sqrt{2(k_0+m)}}
+\left(\begin{array}r\eta\\-\eta\end{array}\right)
+\end{split}\end{equation}
+Si tomamos en cuenta el espín obtenemos:
+\begin{equation}
+v(k,s)=-\frac{m-\ck}{\sqrt{2m(k_0+m)}}v^s(k_R)
+\label{pera}
+\end{equation}
+\par Esta expresión me parece correcta porque tiene unidades de $\sqrt{\text{masa}}$, que es lo que esperamos de estos espinores. Por otro lado el resultado al que se supone que debemos llegar es adimensional. También pienso que es correcta porque en las notas se normaliza a $u(k,s)$ de manera parecida.
+\par El signo es irrelevante porque no podemos calcular ni medir la fase de $N_p$.

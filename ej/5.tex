@@ -1,0 +1,88 @@
+\section{Proyecciones $\Lambda_+$ y $\Lambda_-$}
+\begingroup\color{blue}
+Prueba que
+\begin{equation}
+\Lambda_+=\frac{\cp+m}{2m},\qquad
+\Lambda_-=\frac{\cp-m}{2m}
+\end{equation}
+satisfacen
+\begin{equation}
+\Lambda_\pm^2=\Lambda_\pm,\qquad
+\Lambda_+\Lambda_-=0.
+\end{equation}
+¿Cómo actúan estos proyectores sobre los espinores básicos
+\begin{equation}
+u_r(k)=u(r,k),\qquad
+v_r(k)=v(r,k)\;\text{?}
+\end{equation}
+\endgroup
+Desarrollando,
+\begin{equation}\begin{split}
+\Lambda_+\Lambda_+
+&=\frac1{4m^2}(p_\mu\gamma^\mu+m)(p_\nu\gamma^\nu+m)\\
+&=\frac1{4m^2}(p_\mu p_\nu\gamma^\mu\gamma^\nu+2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(\tfrac12p_\mu p_\nu\{\gamma^\mu,\gamma^\nu\}+2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(p_\mu p^\mu+2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(2mp_\mu\gamma^\mu+2m^2)\\
+&=\frac1{2m}(p_\mu\gamma^\mu+m)\\
+&=\Lambda_+
+\end{split}\end{equation}
+También,
+\begin{equation}\begin{split}
+\Lambda_-\Lambda_-
+&=\frac1{4m^2}(p_\mu\gamma^\mu-m)(p_\nu\gamma^\nu-m)\\
+&=\frac1{4m^2}(p_\mu p_\nu\gamma^\mu\gamma^\nu-2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(\tfrac12p_\mu p_\nu\{\gamma^\mu,\gamma^\nu\}-2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(p_\mu p^\mu-2mp_\mu\gamma^\mu+m^2)\\
+&=\frac1{4m^2}(-2mp_\mu\gamma^\mu+2m^2)\\
+&=-\frac1{2m}(p_\mu\gamma^\mu-m)\\
+&=-\Lambda_-
+\end{split}\end{equation}
+quizás me equivoqué. Si no, el signo se resuelve redefiniendo al operador $\Lambda_-$.
+$$\Lambda_-\mapsto-\Lambda_-=-\frac{p-m}{2m}$$
+\par Para conocer los efectos de estos proyectores con los espinores $u$ y $v$ usaremos la información de las notas TCC.2.6, p. 357, y del problema 4.b de esta tarea para reescribir las $\Lambda$ como:
+\begin{equation}
+\Lambda_+=\frac1{2m}u^s(p)\bar u_s(p),
+\qquad
+\Lambda_-=-\frac1{2m}v^s(p)\bar v_s(p).
+\end{equation}
+Por lo tanto,
+\begin{equation}
+\Lambda_+u^r(p)
+=\frac1{2m}u^s(p)\bar u_s(p)u^r(p)
+=\frac{2m}{2m}\delta^r_su^s(p)
+=u^r(p),
+\end{equation}
+donde hemos usado que el producto matricial es asociativo.
+\begin{equation}
+\Lambda_+v^r(p)
+=\frac1{2m}u^s(p)\bar u_s(p)v^r(p) = 0,
+\quad
+\text{porque $\bar u_s(p)v^r(p)=0$.}
+\end{equation}
+En este desarrollo utilizamos el segundo resultado del problema 4.c.
+\begin{equation}
+\Lambda_-u^r(p)
+=-\frac1{2m}v^s(p)\bar v_s(p)u^r(p)
+=0,
+\quad
+\text{porque $\bar v_s(p)u^r(p)=0$.}
+\end{equation}
+En este otro, utilizamos el primer resultado del problema 4.c.
+\begin{equation}
+\Lambda_-v^r(p)=-\frac1{2m}v^s(p)\bar v_s(p)v^r(p)
+=-\frac{-2m}{2m}\delta_s^rv^s(p)
+=v^r(p)
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+

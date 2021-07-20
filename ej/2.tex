@@ -1,0 +1,65 @@
+\section{El pseudovector $\bar\psi\gamma^\mu\gamma_5\psi$}
+\begingroup\color{blue}
+Muestre que la combinación $\bar\psi\gamma^\mu\gamma_5\psi$ transforma como las componentes de un pseudovector.
+\endgroup
+Comenzaremos reescribiendo:
+\begin{equation}\begin{split}
+\bar\psi\gamma^\mu\gamma_5\psi
+&=
+\left(
+u_-^\dagger\;u_+^\dagger
+\right)
+\left(
+{}_{\sigma_+^\mu}{}^{\sigma_-^\mu}
+\right)
+\left(
+{}^{\mathbb I}
+{}_{-\mathbb I}
+\right)
+\left({}_{u_-}^{u_+}\right)\\
+&=
+\left(
+u_-^\dagger\;u_+^\dagger
+\right)
+\left(
+{}_{\sigma_+^\mu}{}^{\sigma_-^\mu}
+\right)
+\left({}_{-u_-}^{u_+}\right)\\
+&=
+\left(
+u_-^\dagger\;u_+^\dagger
+\right)
+\left({}^{-\sigma_-^\mu u_-}_{\sigma_+^\mu u_+}\right)\\
+&=u_+^\dagger\sigma_+^\mu u_+ - u_-^\dagger\sigma_-^\mu u_-
+\end{split}\end{equation}
+Por lo tanto, ante una transformación de Lorentz tenemos:
+\begin{equation}\begin{split}
+\bar\psi'\gamma^\mu\gamma_5\psi'
+&=u_+^{\dagger\prime}\sigma_+^\mu u_+' - u_-^{\dagger\prime}\sigma_-^\mu u_-'\\
+&=\Lambda^\mu{}_\nu\;(u_+^\dagger\sigma_+^\nu u_+ - u_-^\dagger\sigma_-^\nu u_-)\\
+&=\Lambda^\mu{}_\nu\;\bar\psi\gamma^\nu\gamma_5\psi,
+\end{split}\end{equation}
+es decir, transforma como vector o pseudovector.
+\par Para corroborar que es un pseudovector recurriremos a conocer qué sucede ante cambio de paridad. Ante un cambio de paridad los espinores de Weil $u_\pm$ cambian el comportamiento de su transformación al comportamiento de $u_\mp$. Obtenemos:
+\begin{equation}
+P(\;\bar\psi'\gamma^\mu\gamma_5\psi'\;)
+=u_-^{\dagger\prime}\sigma_+^\mu u_-' - u_+^{\dagger\prime}\sigma_-^\mu u_+',
+\end{equation}
+que cambia de signo la componente temporal, pero mantiene el signo en las componentes espaciales. Se trata entonces de un pseudovector, porque si fuera un vector cambiaría de signo las espaciales y mantendría intacta la temporal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
